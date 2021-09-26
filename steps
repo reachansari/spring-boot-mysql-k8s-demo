@@ -1,5 +1,3 @@
-# spring-boot-mysql-k8s-demo
-
 mysql -h mysql -u testuser -p
 pwd: testuser@123
 
