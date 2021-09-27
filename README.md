@@ -35,9 +35,14 @@ These files will be available under deploy folder and need to be executed sequen
 
 
 To verify all deployment objects running
+
 ```kubectl get all -o wide```
 
-kubectl logs -f spring-boot-mysql-k8s-demo-6444f95584-mfvnz
+Spring boot app log verification
+
+```kubectl logs -f <podName>```
+
+```Eg: kubectl logs -f spring-boot-mysql-k8s-demo-6444f95584-mfvnz```
 
 kubectl exec -it mysql-795b8d8fbb-6mjxl bash
 
