@@ -9,26 +9,16 @@ Run spring boot application and mysql on kubernetes cluster
 * kubectl
 * Jdk 1.8
 
-## [Maven Changes](#maven-changes)
-
-mysql -h mysql -u testuser -p
-pwd: testuser@123
-
-show databases;
-
-use test;
-
-show tables;
-
-Compilation command:
+## [Compilation command](#Ccompilation-command)
 mvn clean package -DskipTests
 
-Build Docker image
+## [Build Docker image](#build-docker-image)
 docker build -t spring-boot-mysql-k8s-demo:1.0 .
 
-verify image creation
->docker image ls
+## [Verify image creation](#verify-image-creation)
+docker image ls
 
+## [Create kubernetes objects for spring-boot app and mysql database](#create-k8s)
 kubectl apply -f mysql-credentials.yml
 kubectl apply -f mysql-root-credentials.yml
 kubectl apply -f mysql-configmap.yml
