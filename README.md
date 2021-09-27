@@ -1,9 +1,15 @@
 ![](./img/kubernetes-docker.svg)
-# spring-boot-mysql-k8s-demo
+
+## [spring-boot-mysql-k8s-demo](#spring-boot-mysql-k8s-demo)
 
 Run spring boot application and mysql on kubernetes cluster
 
-## [Maven Changes]
+## [Prerequisite](#Prerequisite)
+* Docker and kubernetes cluster
+* kubectl
+* Jdk 1.8
+
+## [Maven Changes](#maven-changes)
 
 mysql -h mysql -u testuser -p
 pwd: testuser@123
