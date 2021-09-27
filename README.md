@@ -21,15 +21,15 @@ docker image ls
 ## [Create kubernetes objects for spring-boot app and mysql database](#create-k8s)
 These files will be available under deploy folder and need to be executed sequentially.
 
-```kubectl apply -f mysql-credentials.yml
+```kubectl apply -f mysql-credentials.yml```
 
-kubectl apply -f mysql-root-credentials.yml
+```kubectl apply -f mysql-root-credentials.yml```
 
-kubectl apply -f mysql-configmap.yml
+```kubectl apply -f mysql-configmap.yml```
 
-kubectl apply -f mysql-deployment.yml
+```kubectl apply -f mysql-deployment.yml```
 
-kubectl apply -f spring-boot-deployment.yml```
+```kubectl apply -f spring-boot-deployment.yml```
 
 ## [Verify deployment objects](#verify-deployment-objects)
 
