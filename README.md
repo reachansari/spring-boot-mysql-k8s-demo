@@ -33,7 +33,8 @@ kubectl apply -f spring-boot-deployment.yml
 
 ## [Verify deployment objects](#verify-deployment-objects)
 
-#'To verify all deployment objects running'
+
+#```To verify all deployment objects running```
 kubectl get all -o wide
 
 kubectl logs -f spring-boot-mysql-k8s-demo-6444f95584-mfvnz
