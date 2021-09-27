@@ -10,15 +10,15 @@ Run spring boot application and mysql on kubernetes cluster
 * Jdk 1.8
 
 ## [Compilation command](#compilation-command)
-mvn clean package -DskipTests
+```mvn clean package -DskipTests```
 
 ## [Build Docker image](#build-docker-image)
-docker build -t spring-boot-mysql-k8s-demo:1.0 .
+```docker build -t spring-boot-mysql-k8s-demo:1.0 .```
 
 ## [Verify image creation](#verify-image-creation)
-docker image ls
+```docker image ls```
 
-## [Create kubernetes objects for spring-boot app and mysql database](#create-k8s)
+## [Install kubernetes objects for spring-boot app and mysql database](#create-k8s)
 These files will be available under deploy folder and need to be executed sequentially.
 
 ```kubectl apply -f mysql-credentials.yml```
@@ -66,6 +66,28 @@ Execute sql commands:
 
 ```show tables;```
 
-```select * from user;``` -> This will return empty records as we have not inserted any data yet
+```select * from user;``` -> This will return empty records as we have not inserted any data yet.
 
-uninstall
+## [API end-points](#API-end-points)
+
+- POST -> `http://localhost:30163/addUser` - Add new user using the User model. 
+`Eg:{"name":"Mark","country":"US"}`
+
+- GET -> `http://localhost:30163/users` - This returns the list of users from the mysql table.
+
+- GET -> `http://localhost:30163/findUser/{id}` - This returns the user by id.
+
+- GET -> `http://localhost:30163/deleteUser/{id}` - This will delete the user by id.
+
+## [Uninstall kubernetes objects for spring-boot app and mysql database ](#uninstall)
+These files will be available under deploy folder and need to be executed sequentially.
+
+```kubectl delete -f mysql-credentials.yml```
+
+```kubectl delete -f mysql-root-credentials.yml```
+
+```kubectl delete -f mysql-configmap.yml```
+
+```kubectl delete -f mysql-deployment.yml```
+
+```kubectl delete -f spring-boot-deployment.yml```
