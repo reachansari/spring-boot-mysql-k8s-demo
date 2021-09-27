@@ -91,3 +91,11 @@ These files will be available under deploy folder and need to be executed sequen
 ```kubectl delete -f mysql-deployment.yml```
 
 ```kubectl delete -f spring-boot-deployment.yml```
+
+## [Removing Docker Image](#removing-docker-image)
+
+```docker image ls -> Prints the docker image name and tag```
+
+```docker image rm <imageName>:<tag>```
+
+`Eg: docker image rm spring-boot-mysql-k8s-demo:1.0`
