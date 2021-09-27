@@ -19,7 +19,7 @@ docker build -t spring-boot-mysql-k8s-demo:1.0 .
 docker image ls
 
 ## [Create kubernetes objects for spring-boot app and mysql database](#create-k8s)
-These files will be available under deploy folder
+These files will be available under deploy folder and need to be executed sequentially.
 
 kubectl apply -f mysql-credentials.yml
 
@@ -31,7 +31,10 @@ kubectl apply -f mysql-deployment.yml
 
 kubectl apply -f spring-boot-deployment.yml
 
->kubectl get all -o wide
+## [Verify deployment objects](#verify-deployment-objects)
+
+#To verify all deployment objects running
+kubectl get all -o wide
 
 kubectl logs -f spring-boot-mysql-k8s-demo-6444f95584-mfvnz
 
