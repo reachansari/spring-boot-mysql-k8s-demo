@@ -4,10 +4,13 @@
 
 Run spring boot application and mysql on kubernetes cluster
 
-## [Prerequisite](#Prerequisite)
+## [Prerequisite / Libraries used](#Prerequisite)
 * Docker and kubernetes cluster
 * kubectl
-* Jdk 1.8
+* Spring Boot
+* Spring Configuration
+* Spring REST Controller
+* MySQL
 
 ## [Compilation command](#compilation-command)
 ```mvn clean package -DskipTests```
@@ -34,11 +37,11 @@ These files will be available under deploy folder and need to be executed sequen
 ## [Verify deployment objects](#verify-deployment-objects)
 
 
-To verify all deployment objects running:
+> To verify all deployment objects running:
 
 ```kubectl get all -o wide```
 
-Spring boot app log verification:
+> Spring boot app log verification:
 
 ```kubectl logs -f <podName>```
 
@@ -46,19 +49,19 @@ Spring boot app log verification:
 
 ## [Verify mysql container and connectivity](#Verify-mysql-container)
 
-Navigate inside mysql container:
+> Navigate inside mysql container:
 
 ```kubectl exec -it <podName> bash```
 
 ```Eg: kubectl exec -it mysql-795b8d8fbb-6mjxl bash```
 
-Provide credentials:
+> Provide credentials:
 
 ```mysql -h mysql -u testuser -p```
 
-Enter DB password as: testuser@123
+> Enter DB password as: testuser@123
 
-Execute sql commands:
+> Execute sql commands:
 
 ```show databases;```
 
@@ -94,7 +97,11 @@ These files will be available under deploy folder and need to be executed sequen
 
 ## [Removing Docker Image](#removing-docker-image)
 
-```docker image ls -> Prints the docker image name and tag```
+> Prints the docker image name and tag
+
+```docker image ls```
+
+> Remove a docker image
 
 ```docker image rm <imageName>:<tag>```
 
