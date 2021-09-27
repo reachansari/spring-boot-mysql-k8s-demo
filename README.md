@@ -34,27 +34,38 @@ These files will be available under deploy folder and need to be executed sequen
 ## [Verify deployment objects](#verify-deployment-objects)
 
 
-To verify all deployment objects running
+To verify all deployment objects running:
 
 ```kubectl get all -o wide```
 
-Spring boot app log verification
+Spring boot app log verification:
 
 ```kubectl logs -f <podName>```
 
 ```Eg: kubectl logs -f spring-boot-mysql-k8s-demo-6444f95584-mfvnz```
 
-kubectl exec -it mysql-795b8d8fbb-6mjxl bash
+## [Verify mysql container and connectivity](#Verify-mysql-container)
 
-mysql -h mysql -u testuser -p
-pwd: testuser@123
+Navigate inside mysql container:
 
-show databases;
+```kubectl exec -it <podName> bash```
 
-use test;
+```Eg: kubectl exec -it mysql-795b8d8fbb-6mjxl bash```
 
-show tables;
+Provide credentials:
 
-select * from user;
+```mysql -h mysql -u testuser -p```
+
+Enter DB password as: testuser@123
+
+Execute sql commands:
+
+```show databases;```
+
+```use test;```
+
+```show tables;```
+
+```select * from user;``` -> This will return empty records as we have not inserted any data yet
 
 uninstall
