@@ -3,7 +3,7 @@
 
 Run spring boot application and mysql on kubernetes cluster
 
-## [Maven Changes](#maven-changes)
+## [Maven Changes]
 
 mysql -h mysql -u testuser -p
 pwd: testuser@123
