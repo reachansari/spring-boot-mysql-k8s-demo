@@ -1,4 +1,4 @@
-![](./img/kubernetes-docker.svg)
+![](./img/image.png)
 
 ## [spring-boot-mysql-k8s-demo](#spring-boot-mysql-k8s-demo)
 
