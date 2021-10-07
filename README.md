@@ -84,11 +84,10 @@ These files will be available under deploy folder and need to be executed sequen
 
 | method            | resource          | description                                                                                   |
 |:------------------|:------------------|:----------------------------------------------------------------------------------------------|
-| `POST`			| `Add new user using the User model`		| Add new user using the User model	Eg:{"name":"Mark","country":"US"}													|
-| `GET`			| `/employees/{id}`	| get a employee by Id -> 200(OK), 400(wrong id format), 404(no employee with such id)					|
-| `POST`			| `/employees`		| creates a employee in the DB -> 201(created)														|
-| `PUT`			| `/employees/{id}`	| updates a employee in the DB -> 204(updated), 400(wrong id format), 404(no employee with such id)		|
-| `DELETE`		| `/employees/{id}`	| deletes a employee from the DB -> 204(deleted), 400(wrong id format), 404(no employee with such id)	|
+| `POST`			| `http://localhost:30163/addUser`		| Add new user using the User model	Eg:{"name":"Mark","country":"US"}													|
+| `GET`			| `http://localhost:30163/users`	| This returns the list of users from the mysql table.				|
+| `GET`			| `http://localhost:30163/findUser/{id}`		| This returns the user by id.													|
+| `GET`			| `http://localhost:30163/deleteUser/{id}`	| This will delete the user by id.|
 
 ## [Uninstall kubernetes objects for spring-boot app and mysql database ](#uninstall)
 These files will be available under deploy folder and need to be executed sequentially.
