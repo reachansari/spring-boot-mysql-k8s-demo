@@ -73,7 +73,7 @@ These files will be available under deploy folder and need to be executed sequen
 
 ## [API end-points](#API-end-points)
 
-| method            | resource          | description                                                                                   |
+| Method            | URL          | Description                                                                                   |
 |:------------------|:------------------|:----------------------------------------------------------------------------------------------|
 | `POST`			| `http://localhost:30163/addUser`		| Add new user using the User model.	Eg:{"name":"Mark","country":"US"}													|
 | `GET`			| `http://localhost:30163/users`	| This returns the list of users from the mysql table.				|
