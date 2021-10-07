@@ -73,18 +73,9 @@ These files will be available under deploy folder and need to be executed sequen
 
 ## [API end-points](#API-end-points)
 
-- POST -> `http://localhost:30163/addUser` - Add new user using the User model. 
-`Eg:{"name":"Mark","country":"US"}`
-
-- GET -> `http://localhost:30163/users` - This returns the list of users from the mysql table.
-
-- GET -> `http://localhost:30163/findUser/{id}` - This returns the user by id.
-
-- GET -> `http://localhost:30163/deleteUser/{id}` - This will delete the user by id.
-
 | method            | resource          | description                                                                                   |
 |:------------------|:------------------|:----------------------------------------------------------------------------------------------|
-| `POST`			| `http://localhost:30163/addUser`		| Add new user using the User model	Eg:{"name":"Mark","country":"US"}													|
+| `POST`			| `http://localhost:30163/addUser`		| Add new user using the User model.	Eg:{"name":"Mark","country":"US"}													|
 | `GET`			| `http://localhost:30163/users`	| This returns the list of users from the mysql table.				|
 | `GET`			| `http://localhost:30163/findUser/{id}`		| This returns the user by id.													|
 | `GET`			| `http://localhost:30163/deleteUser/{id}`	| This will delete the user by id.|
